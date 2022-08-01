@@ -10,9 +10,38 @@
     <header>
         <h1>Calculador de Figuras Geometricas</h1>
     </header>
+
     <section>
-        
+        <h2>Calcula el area y perimetro de un cuadrado</h2>
     </section>
+
+    <form action="">
+        <label for="inputCuadrado">
+            Escribe cuanto mide cada lado de tu cuadrado
+        </label><br>
+        <input id="inputCuadrado" type="number">
+        <button type="button" onclick="calcularPerimetrocuadrado()">Calcular Perimetro</button>
+        <button type="button" onclick="calcularAreaCuadrado()">Calcular Area</button>
+    </form>
+
+    <form action="">
+        <p>
+            Escribe los Lados de tu triangulo:
+        </p>
+        <label for="ladoA">Lado A</label><br>
+        <input id="ladoA" type="number"><br>
+
+        <label for="ladoB">Lado B</label><br>
+        <input id="ladoB" type="number"><br>
+
+        <label for="ladoBase">Lado Base</label><br>
+        <input id="ladoBase" type="number"><br>
+        
+        <button type="button" onclick="calcularPerimetroTriangulo()">Calcular Perimetro</button>
+        <button type="button" onclick="calcularAreaTriangulo()">Calcular Area</button>
+        <button type="button" onclick="calcularAlturaTriangulo()">Calcular Altura</button>
+
+    </form>
 
 <script src="./Figuras.js"></script>
 </body>

@@ -39,7 +39,7 @@ console.group("Triangulo");
 // console.log("El perimetro del triangulo es: " + perimetroTriangulo + "cm");
 
 function perimetroTriangulo(lado1, lado2, base) {
-    return lado1 + lado2 + base;
+    return parseInt(lado1) + parseInt(lado2) + parseInt(base);
 }
 
 // let areaTriangulo = (baseTriangulo * alturaTriangulo) / 2;
@@ -117,12 +117,14 @@ function calcularAreaCuadrado() {
 
 function calcularPerimetroTriangulo() {
     const inputLadoA = document.getElementById("ladoA");
-    const valueLadoA = inputLadoA.value;
     const inputLadoB = document.getElementById("ladoB");
-    const valueLadoB = inputLadoB.value;
     const inputLadoBase = document.getElementById("ladoBase");
+    const valueLadoA = inputLadoA.value;
+    const valueLadoB = inputLadoB.value;
     const valueLadoBase = inputLadoBase.value;
 
-    const perimetro = perimetroTriangulo(valueLadoA, valueLadoB, valueLadoBase);
+    const perimetro = perimetroTriangulo(valueLadoA,valueLadoB, valueLadoBase);
     alert(perimetro);
 }
+
+

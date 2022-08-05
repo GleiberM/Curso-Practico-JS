@@ -46,7 +46,7 @@ function perimetroTriangulo(lado1, lado2, base) {
 // console.log("El area del triangulo es: " + areaTriangulo + "cm^2");
 
 function areaTriangulo(base, altura) {
-    return (base * altura) / 2;
+    return (parseInt(base) * parseInt(altura)) / 2;
 }
 
 console.groupEnd();
@@ -128,3 +128,26 @@ function calcularPerimetroTriangulo() {
 }
 
 
+function calcularAreaTriangulo() {
+    
+}
+
+function calcularAlturaTriangulo() {
+    const inputLadoA = document.getElementById("ladoA");
+    const inputLadoB = document.getElementById("ladoB");
+    const inputLadoBase = document.getElementById("ladoBase");
+    const valueLadoA = inputLadoA.value;
+    const valueLadoB = inputLadoB.value;
+    const valueLadoBase = inputLadoBase.value;
+
+    if (valueLadoA === valueLadoB) {
+        function isosceles(ladoA, base) {
+            return  (Math.sqrt(Math.pow(ladoA, 2) - (Math.pow(base, 2) / 4)));
+        }
+        const altura = isosceles(valueLadoA, valueLadoBase);
+        alert(altura);
+    } else {
+        alert("Los lados no corresponden a un triangulo Isosceles")
+    }
+    
+}
